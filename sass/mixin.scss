@@ -1,0 +1,7 @@
+@mixin titleStile($fontFamily, $fontColor, $fontSize, $fonWight, $lineHeight) {
+    font-family: $fontFamily;
+    color: $fontColor;
+    font-size: $fontSize;
+    font-weight: $fonWight;
+    line-height: $lineHeight;
+}

@@ -1,0 +1,105 @@
+@import "mixin";
+
+$font-family-playfair: "Playfair Display", serif;
+$font-family-imbue: "Imbue", serif;
+$font-family-jost: "Jost", sans-serif;
+
+$font-wight-black:900;
+$font-wight-regular:400;
+$font-wight-bold:700;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #B3B3B3;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+
+.head-container{
+    max-width: 1850px;
+    margin: 0 auto;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav {
+    width: 40%;
+}
+
+.contact{
+    width: 10%;
+}
+
+.nav-items, .contact-items{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-item { 
+    a{
+        text-transform: uppercase;
+        @include titleStile($font-family-jost, #000000, 14px, $font-wight-regular, 100%);
+    }
+}
+
+/*billbord*/
+
+.billboard-header{
+    display: flex;
+    position: absolute;
+    top: -150px;
+    z-index: 1;
+    align-items: flex-start;
+}
+
+.billboard{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    position: relative;
+}
+
+.billboard-title{
+   @include titleStile($font-family-imbue, #16160C, 200px, $font-wight-black, 70%);
+}
+
+.billboard-subtitle{
+    @include titleStile($font-family-jost, #000000, 24px, $font-wight-regular, 100%);
+}

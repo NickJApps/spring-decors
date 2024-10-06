@@ -9,6 +9,7 @@ $font-wight-regular:400;
 $font-wight-bold:700;
 
 
+
 body {
     margin: 0;
     padding: 0;
@@ -46,9 +47,17 @@ h1{
     padding: 0;
 }
 
+/*section*/
+
+.section-sm {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /*header*/
 
 .head-container{
+    padding-top: 40px;
     max-width: 1850px;
     margin: 0 auto;
 }
@@ -75,7 +84,7 @@ h1{
 .nav-item { 
     a{
         text-transform: uppercase;
-        @include titleStile($font-family-jost, #000000, 14px, $font-wight-regular, 100%);
+        @include textStile($font-family-jost, #000000, 14px, $font-wight-regular, 100%);
     }
 }
 
@@ -84,7 +93,7 @@ h1{
 .billboard-header{
     display: flex;
     position: absolute;
-    top: -150px;
+    top: -140px;
     z-index: 1;
     align-items: flex-start;
 }
@@ -97,9 +106,44 @@ h1{
 }
 
 .billboard-title{
-   @include titleStile($font-family-imbue, #16160C, 200px, $font-wight-black, 70%);
+    margin-right: 50px;
+   @include textStile($font-family-imbue, #16160C, 200px, $font-wight-black, 70%);
+}
+
+.billboard-nav{
+    margin-left: 50px;
+}
+
+.billboard-nav-button{  
+    margin-bottom: 64px;
 }
 
 .billboard-subtitle{
-    @include titleStile($font-family-jost, #000000, 24px, $font-wight-regular, 100%);
+    margin-bottom: 95px;
+    @include textStile($font-family-jost, #000000, 24px, $font-wight-regular, 100%);
+}
+
+.shop-now-button{
+    border: 1px solid black;
+    padding: 10px 15px;
+}
+
+.slider-button{
+    background: transparent;
+    border: none;
+}
+
+/*welcome section*/
+.welcome-title, .welcome-text{
+    text-align: center;
+}
+
+.welcome-title {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include textStile ($font-family-jost, #000000, 18px, $font-wight-regular, 100%);
+} 
+
+.welcome-text {
+    @include textStile ($font-family-playfair, #000000, 42px, $font-wight-regular, 100%);
 }
